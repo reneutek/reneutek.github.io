@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reneutek - Structural retrofitting, rehabilitation, waterproofing, floorings and claddings.">
+<title>Reneutek | Strengthening the Past, Securing the Future</title>
+<style>
+:root{
+  --ink:#111827; --blue:#0c7db5; --cyan:#10b6e8; --slate:#52606d;
+  --paper:#ffffff; --soft:#f3f7f9; --line:#dfe7eb;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Cambria,Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.65}
+a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo img{display:block;width:255px;max-width:42vw;height:auto}
+nav{display:flex;gap:22px;font-size:.86rem;font-weight:700;color:#42515d}
+nav a:hover{color:var(--blue)}
+.menu{display:none;background:none;border:0;font-size:1.35rem}
+.hero{min-height:650px;display:grid;place-items:center;position:relative;overflow:hidden;background:
+linear-gradient(110deg,rgba(7,20,31,.96),rgba(10,41,58,.86)),
+repeating-linear-gradient(135deg,transparent 0 52px,rgba(255,255,255,.035) 53px 54px)}
+.hero:before{content:"";position:absolute;inset:auto -8% -25% auto;width:620px;height:620px;border:1px solid rgba(16,182,232,.28);border-radius:50%;box-shadow:0 0 0 55px rgba(16,182,232,.035),0 0 0 110px rgba(16,182,232,.025)}
+.hero-inner{position:relative;padding:95px 0;color:white}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#62d4f3;text-transform:uppercase;letter-spacing:2.4px;font-size:.76rem;font-weight:700}
+.eyebrow:before{content:"";width:38px;height:2px;background:var(--cyan)}
+h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:1.02;letter-spacing:-2px;max-width:800px;margin:20px 0}
+.hero p{font-size:1.13rem;max-width:670px;color:#d5e1e7;margin-bottom:32px}
+.actions{display:flex;gap:13px;flex-wrap:wrap}.btn{padding:13px 23px;border-radius:4px;font-weight:700;font-size:.92rem;display:inline-block}
+.btn.primary{background:var(--cyan);color:#062331}.btn.secondary{border:1px solid rgba(255,255,255,.45);color:#fff}
+section{padding:88px 0}.label{color:var(--blue);font-size:.76rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.12;margin:10px 0 20px;letter-spacing:-1px}
+.intro{max-width:800px;font-size:1.1rem;color:#42515d}.split{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.statement{border-left:4px solid var(--cyan);padding:22px 0 22px 28px;color:#34424e;font-size:1.08rem}
+.mission-box{background:var(--soft);padding:38px;border-radius:6px;border:1px solid var(--line)}
+.mission-box strong{font-size:1.25rem}.services{background:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+.card{background:#fff;padding:31px;border:1px solid var(--line);border-radius:6px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(18,43,58,.08)}
+.num{font-weight:800;color:var(--cyan);font-size:.8rem;letter-spacing:1px}.card h3{margin:8px 0 13px;font-size:1.28rem}
+.card ul{padding-left:18px;margin:0;color:#53616c;font-size:.95rem}.card li{margin:6px 0}
+.industries{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:36px;border:1px solid var(--line)}
+.industry{background:#fff;padding:27px;font-weight:700;color:#394956}
+.projects{background:#102a39;color:#fff}.projects h2{color:#fff}.projects .label{color:#64d6f3}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+.project{border:1px solid rgba(255,255,255,.17);padding:34px;background:rgba(255,255,255,.035)}
+.project small{color:#64d6f3;font-weight:700;letter-spacing:1px}.project h3{font-size:1.35rem;line-height:1.3;margin:10px 0}
+.project p{color:#d0dce1;margin:0}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:40px}
+.reason{border-top:3px solid var(--cyan);padding-top:18px}.reason h3{font-size:1rem;margin:0 0 8px}.reason p{margin:0;color:#5b6872;font-size:.93rem}
+.contact{background:var(--soft)}.contact-box{background:#fff;border:1px solid var(--line);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.contact-info{font-size:1.02rem}.contact-info p{margin:12px 0}.contact-actions{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.contact-actions .btn{background:var(--ink);color:white}.contact-actions .email{background:var(--cyan);color:#062331}
+footer{background:#0b1821;color:#a9bbc4;padding:28px 0;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;left:0;right:0;top:76px;padding:18px 4%;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.split,.contact-box{grid-template-columns:1fr;gap:30px}.why{grid-template-columns:1fr 1fr}.industries{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){section{padding:65px 0}.hero{min-height:600px}.grid,.project-grid{grid-template-columns:1fr}.why,.industries{grid-template-columns:1fr}.contact-box{padding:28px}.logo img{width:205px}.foot{flex-direction:column;gap:5px}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav" id="nav">
+<a class="logo" href="#home" aria-label="Reneutek Home"><img src="Reneutek.JPG" alt="Reneutek"></a>
+<button class="menu" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+<nav>
+<a href="#about">About</a><a href="#services">Services</a><a href="#industries">Industries</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="wrap hero-inner">
+<span class="eyebrow">Specialist Engineering Solutions</span>
+<h1>Strengthening the Past,<br>Securing the Future.</h1>
+<p>Reneutek is dedicated to extending the life and enhancing the safety of existing buildings and infrastructure through retrofitting, structural rehabilitation and comprehensive waterproofing solutions.</p>
+<div class="actions"><a class="btn primary" href="#services">Explore Our Services</a><a class="btn secondary" href="#contact">Contact Reneutek</a></div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap split">
+<div><div class="label">About Reneutek</div><h2>Modern engineering for aging and distressed structures.</h2>
+<p class="intro">We bring modern engineering solutions to existing buildings and infrastructure, with a commitment to technical excellence and sustainable practices—helping preserve both heritage and utility.</p></div>
+<div>
+<div class="statement">Our focus is on extending service life, enhancing structural safety, providing environmental protection and supporting the long-term usability of existing structures.</div>
+<div class="mission-box"><div class="label">Our Mission</div><strong>Innovative, cost-effective and durable solutions for structural safety, environmental protection and long-term usability.</strong></div>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="wrap"><div class="label">What We Do</div><h2>Our Services</h2>
+<div class="grid">
+<article class="card"><div class="num">01 / STRUCTURAL</div><h3>Retrofitting of Structures</h3><ul><li>Seismic retrofitting for earthquake resistance</li><li>Load capacity enhancement for commercial and residential buildings</li><li>FRP wrapping and jacketing techniques</li><li>Foundation strengthening and underpinning</li><li>Structural health monitoring and evaluation</li></ul></article>
+<article class="card"><div class="num">02 / REPAIR</div><h3>Structural Rehabilitation</h3><ul><li>Restoration of damaged concrete and steel structures</li><li>Crack repair and stabilization</li><li>Corrosion protection and control</li><li>Rebar treatment and protective coatings</li><li>Rehabilitation of heritage buildings with minimal intervention</li></ul></article>
+<article class="card"><div class="num">03 / PROTECTION</div><h3>Waterproofing Solutions</h3><ul><li>Terrace, basement and roof waterproofing</li><li>Expansion joint sealing and repair</li><li>Injection grouting — PU, epoxy and cementitious</li><li>External facade and podium waterproofing</li><li>Industrial and wet area leak-proofing</li></ul></article>
+<article class="card"><div class="num">04 / FINISHES</div><h3>Flooring, Cladding &amp; Painting</h3><ul><li>Industrial grade hardened and epoxy flooring</li><li>Domestic flooring — epoxy, tiled and hardened</li><li>Acid &amp; Alkali proof tile work</li><li>Moisture &amp; Heat proof Exterior Coatings</li></ul></article>
+</div></div>
+</section>
+
+<section id="industries"><div class="wrap"><div class="label">Sector Experience</div><h2>Industries We Serve</h2>
+<div class="industries"><div class="industry">Residential &amp; Commercial Buildings</div><div class="industry">Industrial Facilities</div><div class="industry">Hospitals &amp; Institutions</div><div class="industry">Bridges &amp; Flyovers</div><div class="industry">Heritage &amp; Historical Buildings</div><div class="industry">Government &amp; Public Sector Projects</div></div></div></section>
+
+<section class="projects" id="projects"><div class="wrap"><div class="label">Project Experience</div><h2>Projects completed successfully</h2>
+<div class="project-grid">
+<article class="project"><small>REPAIRING &amp; WATERPROOFING</small><h3>Tagore Research Institute</h3><p>Kalighat, Kolkata-26</p></article>
+<article class="project"><small>RETROFITTING &amp; PAINTING</small><h3>Suprovat Prathamik Vidyala</h3><p>A W.B. Government aided school, New Alipore, Kolkata-53, along with other similar projects.</p></article>
+</div></div></section>
+
+<section id="why"><div class="wrap"><div class="label">The Reneutek Approach</div><h2>Why Choose Reneutek?</h2>
+<div class="why"><div class="reason"><h3>Experienced Team</h3><p>Experienced Civil and Retrofitting engineers.</p></div><div class="reason"><h3>Advanced Practice</h3><p>Use of advanced materials and global best practices.</p></div><div class="reason"><h3>Quality &amp; Timeliness</h3><p>Timely project execution and strict quality control.</p></div><div class="reason"><h3>Long-Term Commitment</h3><p>Commitment to safety, sustainability and client satisfaction.</p></div></div>
+<div style="margin-top:70px;max-width:800px"><div class="label">Our Vision</div><h2>Creating safe and sustainable environments for generations to come.</h2><p class="intro">To be the most trusted and innovative partner in structural rejuvenation and protection.</p></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div><div class="label">Get In Touch</div><h2>Let's strengthen what matters.</h2><div class="contact-info"><p><strong>Reneutek</strong><br>33c D.P.P. Road, Kolkata – 700047</p><p><strong>Phone</strong><br>+91-9804897348 (WhatsApp)<br>+91-9831340986</p><p><strong>Email</strong><br>reneutek@hotmail.com<br>reneutek.in@gmail.com</p></div></div>
+<div class="contact-actions"><a class="btn" href="tel:+919804897348">Call Us</a><a class="btn primary" href="https://wa.me/919804897348" target="_blank" rel="noopener">WhatsApp</a><a class="btn email" href="mailto:reneutek.in@gmail.com">Send Email</a></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Reneutek. All rights reserved.</span><span>Strengthening the Past, Securing the Future.</span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>document.getElementById('nav').classList.remove('open'));
+</script>
+</body></html>
