@@ -47,14 +47,14 @@ h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.12;margin:10px 0 20px;letter-
 .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
 .project{border:1px solid rgba(255,255,255,.17);padding:34px;background:rgba(255,255,255,.035)}
 .project small{color:#64d6f3;font-weight:700;letter-spacing:1px}.project h3{font-size:1.35rem;line-height:1.3;margin:10px 0}
-.project p{color:#d0dce1;margin:0}
+.project p{color:#d0dce1;margin:0}.client,.client h3,.client p{font-family:Cambria,Georgia,"Times New Roman",serif}.client-grid{grid-template-columns:repeat(3,1fr)}.client h3{font-size:1.25rem;margin:0 0 10px}.client p{font-size:1rem}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:40px}
 .reason{border-top:3px solid var(--cyan);padding-top:18px}.reason h3{font-size:1rem;margin:0 0 8px}.reason p{margin:0;color:#5b6872;font-size:.93rem}
 .contact{background:var(--soft)}.contact-box{background:#fff;border:1px solid var(--line);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:45px}
 .contact-info{font-size:1.02rem}.contact-info p{margin:12px 0}.contact-actions{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
 .contact-actions .btn{background:var(--ink);color:white}.contact-actions .email{background:var(--cyan);color:#062331}
 footer{background:#0b1821;color:#a9bbc4;padding:28px 0;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:800px){nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;left:0;right:0;top:76px;padding:18px 4%;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.split,.contact-box{grid-template-columns:1fr;gap:30px}.why{grid-template-columns:1fr 1fr}.industries{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.client-grid{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.project-grid.client-grid{grid-template-columns:1fr}nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;left:0;right:0;top:76px;padding:18px 4%;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.split,.contact-box{grid-template-columns:1fr;gap:30px}.why{grid-template-columns:1fr 1fr}.industries{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){section{padding:65px 0}.hero{min-height:600px}.grid,.project-grid{grid-template-columns:1fr}.why,.industries{grid-template-columns:1fr}.contact-box{padding:28px}.logo img{width:205px}.foot{flex-direction:column;gap:5px}}
 </style>
 </head>
@@ -103,10 +103,11 @@ footer{background:#0b1821;color:#a9bbc4;padding:28px 0;font-size:.85rem}.foot{di
 <section id="industries"><div class="wrap"><div class="label">Sector Experience</div><h2>Industries We Serve</h2>
 <div class="industries"><div class="industry">Residential &amp; Commercial Buildings</div><div class="industry">Industrial Facilities</div><div class="industry">Hospitals &amp; Institutions</div><div class="industry">Bridges &amp; Flyovers</div><div class="industry">Heritage &amp; Historical Buildings</div><div class="industry">Government &amp; Public Sector Projects</div></div></div></section>
 
-<section class="projects" id="projects"><div class="wrap"><div class="label">Project Experience</div><h2>Projects completed successfully</h2>
-<div class="project-grid">
-<article class="project"><small>REPAIRING &amp; WATERPROOFING</small><h3>Tagore Research Institute</h3><p>Kalighat, Kolkata-26</p></article>
-<article class="project"><small>RETROFITTING &amp; PAINTING</small><h3>Suprovat Prathamik Vidyala</h3><p>A W.B. Government aided school, New Alipore, Kolkata-53, along with other similar projects.</p></article>
+<section class="projects" id="projects"><div class="wrap"><div class="label">Our Clients</div><h2>Our Respected Clients</h2>
+ <div class="project-grid client-grid">
+<article class="project client"><h3>TAGORE RESEARCH INSTITUTE</h3><p>Kalighat, Kolkata</p></article>
+<article class="project client"><h3>LAKE TOWN GIRLS SCHOOL</h3><p>Lake Town, Kolkata</p></article>
+<article class="project client"><h3>SUPROVAT PRATHAMIK VIDYALAYA</h3><p>New Alipore, Kolkata</p></article>
 </div></div></section>
 
 <section id="why"><div class="wrap"><div class="label">The Reneutek Approach</div><h2>Why Choose Reneutek?</h2>
